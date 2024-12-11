@@ -8,12 +8,12 @@ The goal is to create a **Java Spring Boot application** showcasing expertise in
 **Core Requirements**  
 1. **Backend Development**
    - Implement a **Java Spring Boot** application with the following RESTful APIs:
-     - **POST /addImage**: Add a new image URL with a specified duration.
+     - **POST /addImage**: Add a new image URL with a specified duration. Validate that URL actually contains an image (JPEG, PNG, WEBP and other).
      - **DELETE /deleteImage/{id}**: Remove an image by its ID.
-     - **POST /addSlideshow**: Add a new slideshow.
+     - **POST /addSlideshow**: Add a new slideshow. The request should include array of images and their play duration.
      - **DELETE /deleteSlideshow/{id}**: Remove a slideshow by its ID.
      - **GET /images/search**: Search for images and their associated slideshows using keywords from the URL or duration.
-     - **GET /slideShow/{id}/slideshowOrder**: Retrieve images in a slideshow ordered by duration.
+     - **GET /slideShow/{id}/slideshowOrder**: Retrieve images in a slideshow ordered by image addition date.
      - **GET /slideShow/{id}/proof-of-play/{imageId}**: Record an event when an image is replaced by the next one.
    
 2. **Data Storage**
@@ -38,6 +38,9 @@ The goal is to create a **Java Spring Boot application** showcasing expertise in
 
 2. **Event-Driven Architecture**
    - Use **Spring EventPublisher** or **Kafka** to log significant API actions (e.g., adding/deleting images).
+  
+2. **Reactive Programming**
+   - Considering non-blocking request handling (try to use reactive stack: WebFlux/r2dbc etc.).
 
 ---
 
