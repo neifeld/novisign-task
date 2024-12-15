@@ -14,7 +14,7 @@ The goal is to create a **Java Spring Boot application** showcasing expertise in
      - **DELETE /deleteSlideshow/{id}**: Remove a slideshow by its ID.
      - **GET /images/search**: Search for images and their associated slideshows using keywords from the URL or duration.
      - **GET /slideShow/{id}/slideshowOrder**: Retrieve images in a slideshow ordered by image addition date.
-     - **GET /slideShow/{id}/proof-of-play/{imageId}**: Record an event when an image is replaced by the next one.
+     - **POST /slideShow/{id}/proof-of-play/{imageId}**: Record an event when an image is replaced by the next one.
    
 2. **Data Storage**
    - Use **MySQL** or **PostgreSQL** for persistent data storage.
