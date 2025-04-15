@@ -1,0 +1,40 @@
+{
+  "name": "Updated Slideshow",
+  "description": "An updated slideshow for testing",
+  "images": [
+    {
+      "id": 1,
+      "url": "http://example.com/image1.jpg",
+      "duration": 5,
+      "name": "First Image",
+      "description": "The first image in the slideshow"
+    },
+    {
+      "id": 2,
+      "url": "http://example.com/image2.jpg",
+      "duration": 10,
+      "name": "Second Image",
+      "description": "The second image in the slideshow"
+    },
+    {
+      "id": 3,
+      "url": "http://example.com/image3.jpg",
+      "duration": 7,
+      "name": "Third Image",
+      "description": "The third image in the slideshow"
+    },
+    {
+      "id": 4,
+      "url": "http://example.com/image4.jpg",
+      "duration": 8,
+      "name": "Fourth Image",
+      "description": "A new image added to the slideshow"
+    }
+  ],
+  "imageOrder": [
+    4,
+    1,
+    3,
+    2
+  ]
+}

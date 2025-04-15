@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Test Slideshow 1",
+    "imageIds": [
+      101,
+      102
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Test Slideshow 2",
+    "imageIds": [
+      103,
+      104
+    ]
+  }
+]

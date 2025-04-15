@@ -1,0 +1,24 @@
+# Test configuration for Spring Boot application
+
+# Database configuration using R2DBC with TestContainers
+spring:
+  r2dbc:
+    url: r2dbc:tc:postgresql:///slideshowdb?TC_IMAGE_TAG=15-alpine
+    username: test
+    password: test
+  
+  # SQL initialization settings
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+
+  # Kafka configuration for testing
+  kafka:
+    bootstrap-servers: localhost:9092
+
+# Kafka topic configuration
+# Note: Kafka can be disabled for tests if not needed
+kafka:
+  topic:
+    proof-of-play: proof-of-play-test

@@ -1,0 +1,53 @@
+spring:
+  application:
+    name: slideshow-service
+  
+  # R2DBC Configuration for database connection
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/slideshowdb  # Database URL
+    username: postgres  # Database username
+    password: postgres  # Database password
+    initialization-mode: always  # Always initialize the database
+    pool:
+      initial-size: 5  # Initial connection pool size
+      max-size: 20  # Maximum connection pool size
+      max-idle-time: 30m  # Maximum idle time for a connection
+      validation-query: SELECT 1  # Query to validate connections
+  
+  # SQL Initialization configuration
+  sql:
+    init:
+      mode: always  # Always run initialization scripts
+      schema-locations: classpath:schema.sql  # Location of the schema file
+  
+  # Kafka Configuration
+  kafka:
+    bootstrap-servers: localhost:9092  # Kafka server address
+
+# Server Configuration
+server:
+  port: 8080  # Port on which the application will run
+
+# Kafka Topics
+kafka:
+  topic:
+    proof-of-play: proof-of-play  # Name of the Kafka topic for proof of play
+
+# Logging Configuration
+logging:
+  level:
+    org.springframework.data.r2dbc: DEBUG  # Set log level for R2DBC
+    io.r2dbc: DEBUG  # Set log level for R2DBC
+    com.nvs.task.slideshow: DEBUG  # Set log level for application package
+
+# Management endpoints configuration
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info  # Expose health and info endpoints
+  endpoint:
+    health:
+      show-details: always  # Always show health details
+      probes:
+        enabled: true  # Enable health probes
